@@ -1,0 +1,43 @@
+// @import "./typography";
+
+* {
+  box-sizing: border-box;
+  @extend .body18;
+
+  font-variant-ligatures: none;
+  -webkit-font-variant-ligatures: none;
+  text-rendering: optimizeLegibility;
+  -moz-osx-font-smoothing: grayscale;
+  font-smoothing: antialiased;
+  -webkit-font-smoothing: antialiased;
+  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+}
+
+::selection {
+  background: $darkgrey;
+  color: white;
+}
+
+html,
+body {
+  font-family: $font-reg;
+  width: 100%;
+}
+
+.wrapper {
+  width: 100%;
+  max-width: 1600px;
+  margin: 0 auto;
+  padding: 128px 64px;
+
+  @media screen and (max-width: 720px) {
+    padding: 96px 24px;
+  }
+}
+
+.mobile-hidden {
+  @media screen and (max-width: 900px) {
+    display: none;
+  }
+}
+

@@ -1,0 +1,128 @@
+@import "@/scss/base/variables";
+
+
+.SiteHeader {
+  // background: rgba(255, 255, 255, 0.5);
+  // backdrop-filter: blur(12px);
+  position: fixed;
+  z-index: 99999999;
+  width: 100%;
+  height: 80px;
+  background-color: $green-base;
+
+  :global {
+    .wrapper {
+      $py: 16px;
+      padding-top: $py;
+      padding-bottom: $py;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      &.white-bg {
+        background-color: white !important;
+      }
+
+      &.scroll {
+        background-color: white;
+      }
+
+      #mobile-menu {
+        display: none;
+      }
+
+      .links-container {
+        display: flex;
+        align-items: center;
+        gap: 16px;
+
+        nav {
+          ul {
+            display: flex;
+            align-items: center;
+            gap: 12px;
+
+            li {
+              a {
+                color: $beige-light;
+                display: inline-block;
+                padding: 16px 12px;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  // Mobile menu
+  @media screen and (max-width: 720px) {
+    // background-color: green;
+    // height: 60px;
+
+    :global {
+      .wrapper {
+        $mobile-padding-x: 24px;
+        padding: 16px 24px;
+
+        #mobile-menu {
+          padding: 8px;
+          display: block;
+          cursor: pointer;
+
+          &.red {
+            color: red;
+          }
+        }
+
+        .links-container {
+          // background: rgba(255, 255, 255, 0.5);
+          // backdrop-filter: blur(12px);
+          background-color: white;
+
+          padding: 16px $mobile-padding-x 24px;
+          position: absolute;
+          width: 100%;
+          height: 100vh;
+          top: 64px;
+          left: 0px;
+
+          display: none;
+
+          &.mobile-hidden {
+            display: none;
+          }
+
+          &.visible {
+            display: block;
+          }
+
+          nav {
+            margin-bottom: 16px;
+
+            ul {
+              flex-direction: column;
+              align-items: start;
+              gap: 8px;
+
+              li {
+                width: 100%;
+                a {
+                  display: block;
+                  padding-left: 4px;
+                  // width: 100%;
+                  // background-color: grey;
+                }
+              }
+            }
+          }
+
+          a[href="register"] {
+            // width: 100%;
+            padding: 16px 24px;
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,131 @@
+@import "../scss/base/typography";
+
+// @import "./base/typography";
+
+.FocusAreas {
+  :global {
+    .wrapper {
+      h2 {
+        margin-bottom: 24px;
+        // padding-left: 4px;
+      }
+
+      h2 + p {
+        @include heading40;
+        margin-bottom: 96px;
+        max-width: 80%;
+      }
+    }
+
+    .areas {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 24px;
+
+      .card {
+        padding: 40px;
+        border: 1px solid #ddd;
+        border-radius: 24px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        &-icon {
+          width: 64px;
+          height: 64px;
+          background-color: #d1e8f2;
+          // background-color: red;
+          border-radius: 16px;
+          margin-bottom: 32px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+        }
+
+        &-heading {
+          font-size: 24px;
+          margin-bottom: 24px;
+          font-weight: 500;
+        }
+
+        &-body {
+          @include body18;
+          margin-bottom: 40px;
+        }
+
+        &-link {
+          font-size: 18px;
+
+          a {
+            display: flex;
+            align-items: center;
+            gap: 4px;
+          }
+
+          img {
+            display: inline-block;
+            width: 24px;
+            height: 24px;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 1200px) {
+    :global {
+      .wrapper {
+        & > h2 + p {
+          margin-bottom: 64px;
+        }
+        .areas {
+          grid-template-columns: 1fr 1fr;
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    :global {
+      .wrapper {
+        & > h2 {
+          @include body16;
+          margin-bottom: 16px;
+        }
+
+        & > h2 + p {
+          @include heading32;
+          width: 100%;
+          max-width: 100%;
+        }
+
+        .areas {
+          grid-template-columns: 1fr;
+
+          .card {
+            padding: 24px;
+
+            .card-icon {
+              width: 48px;
+              height: 48px;
+              padding: 8px;
+              margin-bottom: 16px;
+            }
+
+            .card-heading {
+              margin-bottom: 12px;
+            }
+
+            .card-body {
+              @include body16;
+            }
+
+            .card-link {
+              @include body16;
+            }
+          }
+        }
+      }
+    }
+  }
+}

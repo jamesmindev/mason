@@ -1,0 +1,33 @@
+@import "../scss/base/typography";
+
+.CallToAction {
+  background-color: #d1e8f2;
+  min-height: 550px;
+  display: flex;
+  align-items: center;
+
+  :global {
+    .wrapper {
+      display: block;
+    }
+
+    h2 {
+      font-size: 40px;
+      line-height: 48px;
+      font-weight: 450;
+
+      width: 50%;
+      padding-bottom: 32px;
+    }
+  }
+
+  @media screen and (max-width: 720px) {
+    :global {
+      h2 {
+        width: 100%;
+        @include heading32;
+        padding-bottom: 24px;
+      }
+    }
+  }
+}

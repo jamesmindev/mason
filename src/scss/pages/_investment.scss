@@ -1,0 +1,277 @@
+.page-investment {
+  .intro {
+    min-height: 600px;
+    @include flex-center;
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+
+      h1 {
+        @include heading48;
+
+        span {
+          display: block;
+          color: #85d1f2;
+          font-style: italic;
+          font-weight: 300;
+        }
+      }
+
+      p {
+        padding-bottom: 24px;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .wrapper {
+        grid-template-columns: 1fr;
+
+        h1 {
+          @include heading40;
+          padding-bottom: 40px;
+        }
+
+        p {
+          @include body16;
+        }
+      }
+    }
+  }
+
+  .our-expertise {
+    background-color: $lightblue;
+
+    .wrapper {
+      padding-top: 160px;
+      padding-bottom: 160px;
+    }
+
+    p {
+      padding-top: 24px;
+      @include heading32;
+      width: 75%;
+    }
+
+    @media screen and (max-width: 900px) {
+      .wrapper {
+        padding: 96px 24px;
+      }
+
+      h2 {
+        @include body16;
+      }
+
+      p {
+        font-size: 28px;
+        line-height: 36px;
+        width: 100%;
+      }
+    }
+  }
+
+  .why-invest {
+    .wrapper {
+      h2 {
+        @include heading40;
+        padding-bottom: 64px;
+      }
+
+      .features {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        .feature {
+          .icon {
+            background-color: $lightblue;
+            width: 64px;
+            height: 64px;
+            border-radius: 16px;
+            @include flex-center;
+            margin-bottom: 16px;
+          }
+
+          .heading {
+            @include heading24;
+            margin-bottom: 8px;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .wrapper {
+        h2 {
+          @include heading32;
+          padding-bottom: 48px;
+        }
+
+        .features {
+          grid-template-columns: 1fr;
+          gap: 64px;
+
+          .feature {
+            .icon {
+              width: 48px;
+              height: 48px;
+              padding: 8px;
+              margin-bottom: 8px;
+            }
+
+            .body {
+              @include body16;
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .invest-with-terrasage {
+    background: $darkgrey;
+    color: white;
+
+    .wrapper {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 40px;
+
+      .content {
+        width: 90%;
+
+        .heading {
+          @include heading40;
+          margin-bottom: 32px;
+
+          span {
+            display: block;
+            font-weight: 300;
+            font-style: italic;
+            color: #d1e8f2;
+          }
+        }
+
+        & > p {
+          margin-bottom: 24px;
+        }
+
+        .stats {
+          margin-top: 96px;
+          display: grid;
+          grid-template-columns: 1fr 1fr;
+          gap: 40px;
+
+          .stat {
+            padding-left: 20px;
+            border-left: 1px solid #3c484d;
+
+            .number {
+              @include heading32;
+            }
+          }
+        }
+      }
+
+      img {
+        width: 100%;
+        height: 600px;
+        border-radius: 16px;
+        object-fit: cover;
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .wrapper {
+        grid-template-columns: 1fr;
+
+        .content {
+          width: 100%;
+          .heading {
+            @include heading32;
+          }
+
+          & > p {
+            @include body16;
+          }
+
+          .stats {
+            margin-top: 64px;
+            gap: 32px 24px;
+
+            .stat {
+              padding-left: 16px;
+
+              p {
+                @include body14;
+
+                &.number {
+                  @include heading24;
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .our-portfolio {
+    .wrapper {
+      .heading {
+        @include heading40;
+        margin-bottom: 40px;
+      }
+
+      .portfolios {
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 24px;
+
+        .card {
+          border: 1px solid #ddd;
+          border-radius: 20px;
+          overflow: hidden;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+
+          .card-wrapper {
+            padding: 40px;
+            min-height: 240px;
+            .name {
+              font-size: 20px;
+              font-weight: 500;
+              margin-bottom: 24px;
+            }
+          }
+
+          & > img {
+            width: 100%;
+            height: 250px;
+            object-fit: cover;
+          }
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .wrapper {
+        .heading {
+          @include heading32;
+        }
+        .portfolios {
+          grid-template-columns: 1fr;
+
+          .card {
+            .card-wrapper {
+              padding: 32px 24px;
+              min-height: unset;
+              @include body16;
+            }
+          }
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,14 @@
+@mixin flex-center {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+@mixin fontface($name, $src, $format, $fontStyle:"normal", $fontWeight:"normal") {
+  @font-face {
+      font-family: $name;
+      src: url($src) format($format);
+      font-style: $fontStyle;
+      font-weight: $fontWeight;
+  }
+ }

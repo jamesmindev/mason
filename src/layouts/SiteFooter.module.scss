@@ -1,0 +1,65 @@
+@import "@/scss/base/typography";
+
+.SiteFooter {
+  background-color: #202629;
+  color: white;
+
+  :global {
+    .wrapper {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-height: 600px;
+      padding-bottom: 64px;
+    }
+
+    .main-nav {
+      display: flex;
+      justify-content: space-between;
+      margin-bottom: 40px;
+
+      nav {
+        display: flex;
+        gap: 40px;
+
+        ul {
+          min-width: 240px;
+
+          li {
+            display: block;
+            margin-bottom: 26px;
+          }
+        }
+      }
+    }
+
+    .copyright {
+      opacity: 0.6;
+      @include body14;
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    :global {
+      .wrapper {
+        padding-bottom: 40px;
+
+        .main-nav {
+          flex-direction: column;
+          align-items: start;
+          margin-bottom: 96px;
+
+          & > svg {
+            margin-bottom: 80px;
+            height: 24px !important;
+          }
+
+          nav {
+            flex-direction: column;
+            gap: 0px;
+          }
+        }
+      }
+    }
+  }
+}

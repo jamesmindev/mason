@@ -1,0 +1,51 @@
+@import "@/scss/base/typography";
+
+.OurPerformance {
+  background: #1a1f21;
+  color: white;
+  padding: 32px 0;
+
+  :global {
+    h2 {
+      @include heading40;
+      padding-bottom: 96px;
+    }
+    .stats-container {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      justify-content: space-between;
+
+      gap: 80px 120px;
+
+      .stat {
+        p {
+          span {
+            display: block;
+            font-size: 32px;
+            line-height: 39px;
+            font-weight: 500;
+          }
+        }
+      }
+    }
+  }
+
+  @media screen and (max-width: 900px) {
+    :global {
+      h2 {
+        @include heading32;
+      }
+
+      .stats-container {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 64px 32px;
+
+        .stat {
+          p {
+            @include body16;
+          }
+        }
+      }
+    }
+  }
+}

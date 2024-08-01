@@ -1,0 +1,212 @@
+.page-home {
+  background-color: $beige-light;
+  .hero {
+    position: relative;
+    height: 90vh;
+    min-height: 700px;
+    max-height: 800px;
+
+    .hero-image {
+      position: absolute;
+      top: 0;
+      z-index: -1;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+    }
+
+    h1 {
+      width: 80%;
+      margin-bottom: 24px;
+      @include heading48;
+    }
+
+    @media screen and (max-width: 900px) {
+      h1 {
+        @include heading40;
+        width: 100%;
+      }
+    }
+  }
+
+  .stats-container {
+    border-bottom: 1px solid #ddd;
+    width: 100%;
+
+    .wrapper {
+      display: flex;
+      justify-content: space-between;
+      padding-top: 96px;
+      padding-bottom: 96px;
+
+      .stat {
+        display: flex;
+        align-items: center;
+        &:last-child {
+          padding-right: 64px;
+        }
+
+        &-icon {
+          width: 64px;
+          height: 64px;
+          background-color: #d1e8f2;
+          border-radius: 16px;
+          margin-right: 12px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          flex-shrink: 0;
+        }
+
+        &1 {
+          font-weight: 600;
+          font-size: 32px;
+          margin-bottom: 4px;
+        }
+
+        &2 {
+          font-size: 18px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 1200px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 40px 24px;
+      }
+    }
+
+    @media screen and (max-width: 720px) {
+      .wrapper {
+        display: grid;
+        grid-template-columns: 1fr;
+        gap: 24px;
+        padding: 64px 32px;
+
+        .stat {
+          // flex-direction: column;
+          align-items: start;
+          margin-bottom: 16px;
+          align-items: center;
+
+          &:last-child {
+            padding-right: 0px;
+          }
+
+          &-icon {
+            margin: 0px;
+            margin-right: 16px;
+          }
+
+          &2 {
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
+  .investment-strategies {
+    .wrapper {
+      h2 {
+        margin-bottom: 24px;
+        padding-left: 4px;
+      }
+
+      h2 + p {
+        @include heading40;
+        margin-bottom: 96px;
+        max-width: 1000px;
+      }
+    }
+
+    .strategies {
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
+      column-gap: 24px;
+
+      .card {
+        background-color: #202629;
+        border-radius: 24px;
+        overflow: hidden;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        // position: relative;
+
+        &-info {
+          color: white;
+          padding: 48px 32px;
+          min-height: 360px;
+
+          h3 {
+            font-size: 32px;
+            margin-bottom: 80px;
+            line-height: 36px;
+
+            span {
+              font-weight: 200;
+              display: block;
+              font-style: italic;
+              margin-bottom: 4px;
+            }
+          }
+
+          p {
+            font-size: 18px;
+            line-height: 26px;
+          }
+        }
+
+        &-image {
+          height: 360px;
+          width: 100%;
+          object-fit: cover;
+          // position: absolute;
+          // bottom: 0px;
+        }
+      }
+    }
+
+    @media screen and (max-width: 900px) {
+      .wrapper {
+        overflow: hidden;
+
+        h2 {
+          @include body16;
+          margin-bottom: 16px;
+        }
+
+        h2 + p {
+          @include heading32;
+        }
+
+        .strategies {
+          width: 100%;
+          display: flex;
+          overflow-x: scroll;
+
+          &::-webkit-scrollbar {
+            display: none;
+          }
+
+          .card {
+            width: 90%;
+            flex-shrink: 0;
+
+            .card-info {
+              padding: 32px 24px;
+
+              p {
+                @include body16;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
