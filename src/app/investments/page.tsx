@@ -1,7 +1,7 @@
 "use client";
 
 import CallToAction from "@/layouts/CallToAction";
-import FocusAreas from "@/layouts/FocusAreas";
+// import FocusAreas from "@/layouts/FocusAreas";
 import OurPerformance from "@/layouts/OurPerformance";
 import { useState } from "react";
 import clsx from "clsx";
@@ -20,7 +20,7 @@ const PageInvestments = () => {
           </div>
         </section>
 
-        <FocusAreas />
+        {/* <FocusAreas /> */}
         <OurPerformance />
         <DisplayImage src="/images/display-12.jpg" />
 

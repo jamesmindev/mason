@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  @extend .body18;
+  @include body18;
 
   font-variant-ligatures: none;
   -webkit-font-variant-ligatures: none;
@@ -10,7 +10,7 @@
   -moz-osx-font-smoothing: grayscale;
   font-smoothing: antialiased;
   -webkit-font-smoothing: antialiased;
-  text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
+  // text-shadow: rgba(0, 0, 0, 0.01) 0 0 1px;
 }
 
 ::selection {
@@ -26,9 +26,9 @@ body {
 
 .wrapper {
   width: 100%;
-  max-width: 1600px;
+  max-width: 1500px;
   margin: 0 auto;
-  padding: 128px 64px;
+  padding: 160px 64px;
 
   @media screen and (max-width: 720px) {
     padding: 96px 24px;

@@ -91,12 +91,12 @@ const SiteHeader = () => {
           <nav className="">
             <ul className="">
               <li className="">
-                <Link className="" href="/investments" onClick={hideMobileMenu}>
+                <Link className="" href="/#how-it-works" onClick={hideMobileMenu}>
                   How it works
                 </Link>
               </li>
               <li>
-                <Link className="" href="/about">
+                <Link className="" href="/#why-choose-mason">
                   Why Mason
                 </Link>
               </li>

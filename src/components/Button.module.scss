@@ -4,26 +4,30 @@
 .btn {
   // font-weight: 400;
   display: inline-block;
-  border-radius: 12px;
+  border-radius: 16px;
   background-color: $green-dark;
-  color: white;
+  color: white !important;
   font-size: 16px;
   font-weight: 500;
-
+  
   &-sm {
     @extend .btn;
     line-height: 20px;
     padding: 12px 16px !important;
+    border-radius: 12px;
   }
 
   &-rg {
     @extend .btn;
-    padding: 16px 24px !important;
-  }
-
-  &-md {
-    @extend .btn;
     padding: 20px 24px !important;
     font-size: 18px;
+    line-height: 22px;
+  }
+
+  &-lg {
+    @extend .btn;
+    padding: 24px 32px !important;
+    font-size: 20px;
+    line-height: 25px;
   }
 }

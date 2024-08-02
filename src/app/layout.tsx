@@ -4,8 +4,8 @@ import SiteHeader from "@/layouts/SiteHeader";
 import SiteFooter from "@/layouts/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Terrasage",
-  description: "Terrasage Investments",
+  title: "Mason",
+  description: "Mason Homes",
 };
 
 export default function RootLayout({

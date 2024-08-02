@@ -1,28 +1,35 @@
 @import "../scss/base/typography";
+@import "../scss/base/variables";
 
 // @import "./base/typography";
 
-.FocusAreas {
+.WhyChooseMason {
+  background: $orange;
+
   :global {
     .wrapper {
       h2 {
-        margin-bottom: 24px;
+        text-align: center;
+        @include heading56;
+        padding-bottom: 80px;
+        color: white;
         // padding-left: 4px;
       }
 
-      h2 + p {
-        @include heading40;
-        margin-bottom: 96px;
-        max-width: 80%;
-      }
+      // h2 + p {
+      //   @include heading40;
+      //   margin-bottom: 96px;
+      //   max-width: 80%;
+      // }
     }
 
     .areas {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
-      gap: 24px;
+      gap: 16px;
 
       .card {
+        background-color: $beige-light;
         padding: 40px;
         border: 1px solid #ddd;
         border-radius: 24px;
@@ -33,40 +40,23 @@
         &-icon {
           width: 64px;
           height: 64px;
-          background-color: #d1e8f2;
-          // background-color: red;
+          background-color: $green-base;
           border-radius: 16px;
-          margin-bottom: 32px;
+          margin-bottom: 24px;
           display: flex;
           justify-content: center;
           align-items: center;
         }
 
         &-heading {
-          font-size: 24px;
-          margin-bottom: 24px;
+          @include heading24;
+          padding-bottom: 12px;
           font-weight: 500;
         }
 
         &-body {
           @include body18;
-          margin-bottom: 40px;
-        }
-
-        &-link {
-          font-size: 18px;
-
-          a {
-            display: flex;
-            align-items: center;
-            gap: 4px;
-          }
-
-          img {
-            display: inline-block;
-            width: 24px;
-            height: 24px;
-          }
+          // margin-bottom: 40px;
         }
       }
     }
