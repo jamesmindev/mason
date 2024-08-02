@@ -18,6 +18,7 @@ import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CustomEase } from "gsap/all";
 import CustomerTestimonials from "@/layouts/CustomerTestimonials";
+import FAQ from "@/layouts/FAQ";
 gsap.registerPlugin(useGSAP, ScrollTrigger, CustomEase);
 
 export default function Home() {
@@ -122,7 +123,7 @@ export default function Home() {
         <WhyChooseMason />
         <DisplayImage src="/images/display-01.jpg" />
         <CustomerTestimonials />
-        
+        <FAQ />
         <CallToAction />
       </main>
     </PageAnim>

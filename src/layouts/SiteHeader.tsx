@@ -101,7 +101,7 @@ const SiteHeader = () => {
                 </Link>
               </li>
               <li>
-                <Link className="" href="/about">
+                <Link className="" href="/#faq">
                   FAQ
                 </Link>
               </li>
@@ -109,7 +109,7 @@ const SiteHeader = () => {
                 {/* <Link className="" href="/about">
                   Apply Now
                 </Link> */}
-                <Button href="/register" size="sm">
+                <Button href="/apply" size="sm">
                   Apply Now
                 </Button>
               </li>

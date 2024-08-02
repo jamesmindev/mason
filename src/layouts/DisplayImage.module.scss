@@ -4,12 +4,20 @@
   min-height: 640px;
   height: 85vh;
   max-height: 950px;
-  overflow: hidden;
+  // overflow: hidden;
 
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  // display: flex;
+  // justify-content: center;
+  // align-items: center;
   // flex-shrink: 0;
+  background-image: url("../../public/images/home-01.jpg");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  position: static;
+  top: 0px;
+  // position: absolute;
 
   img {
     width: 100%;

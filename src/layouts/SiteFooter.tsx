@@ -7,50 +7,47 @@ const SiteFooter = () => {
   return (
     <footer className={styles.SiteFooter}>
       <div className="wrapper">
-        <div className="main-nav">
-          <Logo fillColor="#ffffff" height={28} />
+        <Logo fillColor="" height={64} />
 
+        <div className="footer-nav-container">
           <nav>
             <ul>
               <li>
-                <Link href="/investments">Investments</Link>
+                <Link href="/#how-it-works">How It Works</Link>
               </li>
               <li>
-                <Link href="/#focus-areas">Focus Areas</Link>
+                <Link href="/#faq">FAQs</Link>
               </li>
-              {/* <li>
-                <Link href="/">News</Link>
-              </li> */}
               <li>
-                <Link href="/register">Register Interest</Link>
+                <Link href="/#why-choose-mason">Why Mason</Link>
+              </li>
+              <li>
+                Mason Product Guide
               </li>
             </ul>
             <ul>
               <li>
-                <Link href="/about">About</Link>
+                About Us
               </li>
               <li>
-                <Link href="/about#careers">Careers</Link>
+                Support
               </li>
-              {/* <li>
-                <Link href="/">Privacy Policy</Link>
-              </li> */}
               <li>
-                <Link href="/legal">Legal</Link>
+                Privacy Policy
+              </li>
+              <li>
+                Terms of Service
               </li>
             </ul>
           </nav>
-        </div>
-        <div className="site-info">
-          <p className="copyright">
-            Copyright &copy; 2020-{new Date().getFullYear()} Terrasage
-            Investments. All rights reserved.&nbsp;
-            <br className="mobile-hidden" />
-            Terrasage is a concept project made by James Min. It is not
-            affiliated with any real business.
-          </p>
 
-          <p className="about-this-project"></p>
+          <div className="site-info">
+            <p className="notice">
+              The financial products and services offered by Mason are subject to approval and may vary based on individual financial circumstances. All loan terms, including interest rates and repayment conditions, are subject to change and will be outlined in the final agreement. Mason does not guarantee approval or specific terms and conditions, which are determined based on a comprehensive review of your financial profile. Please consult with a financial advisor to ensure that our products are suitable for your personal financial situation. Mason is a concept project made by James Min. It is not affiliated with any real business.              
+            </p>
+
+            <p className="about-this-project"></p>
+          </div>
         </div>
       </div>
     </footer>

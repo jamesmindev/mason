@@ -1,39 +1,37 @@
 @import "@/scss/base/typography";
 
 .SiteFooter {
-  background-color: #202629;
-  color: white;
+  // background-color: #202629;
+  // color: white;
 
   :global {
     .wrapper {
-      display: flex;
-      flex-direction: column;
-      justify-content: space-between;
-      min-height: 600px;
-      padding-bottom: 64px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 128px;
+      padding-bottom: 128px;
+
+      .footer-nav-container {
+        min-height: 500px;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+      }
     }
 
-    .main-nav {
-      display: flex;
-      justify-content: space-between;
-      margin-bottom: 40px;
+    nav {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
 
-      nav {
-        display: flex;
-        gap: 40px;
-
-        ul {
-          min-width: 240px;
-
-          li {
-            display: block;
-            margin-bottom: 26px;
-          }
+      ul {
+        li {
+          display: block;
+          margin-bottom: 24px;
         }
       }
     }
 
-    .copyright {
+    .notice {
       opacity: 0.6;
       @include body14;
     }

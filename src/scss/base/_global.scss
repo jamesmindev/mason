@@ -24,6 +24,23 @@ body {
   width: 100%;
 }
 
+// body {
+//   $trim-width: 2000px;
+
+//   position: relative;
+//   max-width: $trim-width;
+//   margin: 0 auto;
+//   background-color: $grey-light;
+//   border-left: 1px solid $beige-light;
+//   // border-right: 1px solid $beige-light;
+
+//   & > header {
+//     max-width: $trim-width;
+//   }
+// }
+
+
+
 .wrapper {
   width: 100%;
   max-width: 1500px;

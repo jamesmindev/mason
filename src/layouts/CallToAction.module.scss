@@ -1,22 +1,26 @@
 @import "../scss/base/typography";
+@import "../scss/base/variables";
 
 .CallToAction {
-  background-color: #d1e8f2;
-  min-height: 550px;
+  background-color: $green-base;
+  min-height: 700px;
   display: flex;
   align-items: center;
 
   :global {
     .wrapper {
       display: block;
+      @include flex-center;
+      flex-direction: column;
     }
 
     h2 {
-      font-size: 40px;
-      line-height: 48px;
-      font-weight: 450;
-
-      width: 50%;
+      @include heading48;
+      font-weight: 500 !important;
+      margin: 0 auto;
+      color: $white;
+      text-align: center;
+      width: 80%;
       padding-bottom: 32px;
     }
   }

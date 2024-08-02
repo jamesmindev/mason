@@ -75,8 +75,8 @@ const WhyChooseMason = () => {
             </div>
             <div className="bento-btm">
               <div className="testimonial-basic">
-                <p>Mason made buying our first home a reality with just a 5% deposit. The process was smooth, and the team was incredibly supportive throughout. We felt informed and confident every step of the way. Thanks to Mason, we're now proud homeowners!</p>
-                <p className="customer-name">John D.</p>
+                <p>Mason simplified the entire home-buying process for us. From application to moving in, everything was straightforward and stress-free. We appreciated their transparency and constant communication. We highly recommend Mason to anyone looking to buy a home.</p>
+                <p className="customer-name">Alex and Maria T.</p>
               </div>
               <div className="logo-container">
                 <Logo />

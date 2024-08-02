@@ -6,11 +6,10 @@ const CallToAction = () => {
     <section className={styles.CallToAction}>
       <div className="wrapper">
         <h2>
-          Discover the future of sustainable and responsible investing with
-          Terrasage
+          Start the journey to your new home with minimal upfront deposit
         </h2>
-        <Button href="/register" size="md">
-          Register Interest
+        <Button href="/register" size="lg">
+        Start Your Application
         </Button>
       </div>
     </section>
