@@ -17,6 +17,7 @@ import gsap from "gsap";
 import { useGSAP } from "@gsap/react";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import { CustomEase } from "gsap/all";
+import CustomerTestimonials from "@/layouts/CustomerTestimonials";
 gsap.registerPlugin(useGSAP, ScrollTrigger, CustomEase);
 
 export default function Home() {
@@ -119,82 +120,8 @@ export default function Home() {
         </section>
 
         <WhyChooseMason />
-
-        {/* <section className="investment-strategies">
-          <div className="wrapper">
-            <h2>Investment Strategies</h2>
-            <p>
-              Our investment strategies reflect our commitment to delivering
-              financial returns with meaningful contributions to a more
-              sustainable future.
-            </p>
-
-            <div className="strategies">
-              <div className="card">
-                <div className="card-info">
-                  <h3>
-                    <span>01</span>Thematic Investing
-                  </h3>
-                  <p>
-                    This strategy involves building a portfolio around specific
-                    themes, such as renewable energy, clean technology, or
-                    sustainable agriculture.
-                  </p>
-                </div>
-
-                <Image
-                  className="card-image"
-                  src="/images/strategy-01.jpg"
-                  width={500}
-                  height={500}
-                  alt="card-image"
-                />
-              </div>
-              <div className="card">
-                <div className="card-info">
-                  <h3>
-                    <span>02</span>Impact Investing Fund
-                  </h3>
-                  <p>
-                    This strategy focuses on business initiatives that generate
-                    measurable and positive environmental and social outcomes.
-                  </p>
-                </div>
-
-                <Image
-                  className="card-image"
-                  src="/images/strategy-02.jpg"
-                  width={500}
-                  height={500}
-                  alt="card-image"
-                />
-              </div>
-              <div className="card">
-                <div className="card-info">
-                  <h3>
-                    <span>03</span>ESG Integration
-                  </h3>
-                  <p>
-                    This strategy involves assessing companies based on their
-                    sustainability practices and selecting investments with
-                    strong ESG performance.
-                  </p>
-                </div>
-
-                <Image
-                  className="card-image"
-                  src="/images/strategy-03.jpg"
-                  width={500}
-                  height={500}
-                  alt="card-image"
-                />
-              </div>
-            </div>
-          </div>
-        </section> */}
-
-        
         <DisplayImage src="/images/display-01.jpg" />
+        <CustomerTestimonials />
         
         <CallToAction />
       </main>
