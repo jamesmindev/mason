@@ -1,86 +1,69 @@
 @import "./mixins";
 
-@include fontface('font', '../../../public/fonts/regular.woff', 'woff', 'normal', 400);
-@include fontface('font', '../../../public/fonts/medium.woff', 'woff', 'normal', 500);
-@include fontface('font', '../../../public/fonts/semibold.woff', 'woff', 'normal', 600);
+@include fontface('font', '../../../public/fonts/Regular.woff', 'woff', 'normal', 400);
+@include fontface('font', '../../../public/fonts/Medium.woff', 'woff', 'normal', 500);
+@include fontface('font', '../../../public/fonts/SemiBold.woff', 'woff', 'normal', 600);
+@include fontface('font', '../../../public/fonts/Bold.woff', 'woff', 'normal', 700);
 
 $font-reg: 'font', sans-serif;
 $font-med: 'font', sans-serif;
 $font-semibold: 'font', sans-serif;
+$font-bold: 'font', sans-serif;
 
-
-
-
-
-@mixin body14 {
-  font-size: 14px;
-  line-height: 20px;
-}
 
 @mixin body16 {
   font-size: 16px;
-  line-height: 24px;
+  line-height: 23px;
 }
 
 @mixin body18 {
-  font-family: $font-med;
   font-size: 18px;
-  line-height: 28px;
+  line-height: 26px;
 }
 
-@mixin heading20 {
+@mixin body20 {
   font-size: 20px;
-  line-height: 24px;
-  font-weight: 500;
-  letter-spacing: -0.2px;
+  line-height: 29px;
 }
 
+@mixin body22 {
+  font-size: 22px;
+  line-height: 32px;
+}
+
+// HEADING
 @mixin heading24 {
   font-size: 24px;
   line-height: 32px;
-  font-weight: 600;
-  letter-spacing: 0.2px;
+  font-weight: 700;
 }
 
 @mixin heading32 {
   font-size: 32px;
   line-height: 40px;
-  font-weight: 500;
-  letter-spacing: -0.5px;
+  font-weight: 700;
 }
 
 @mixin heading40 {
-  font-family: $font-semibold;
   font-size: 40px;
-  line-height: 46px;
-  font-weight: 450;
-  letter-spacing: -0.4px;
+  line-height: 48px;
+  font-weight: 700;
 }
 
 @mixin heading48 {
   font-size: 48px;
-  line-height: 58px;
-  font-weight: 500;
-  // letter-spacing: -0.4px;
-}
-
-@mixin heading56 {
-  font-size: 56px;
-  line-height: 66px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+  line-height: 54px;
+  font-weight: 700;
 }
 
 @mixin heading64 {
   font-size: 64px;
-  line-height: 74px;
-  font-weight: 600;
-  letter-spacing: -0.4px;
+  line-height: 70px;
+  font-weight: 700;
 }
 
-@mixin heading72 {
-  font-size: 72px;
-  line-height: 78px;
-  font-weight: 600;
-  letter-spacing: -0.5px;
+@mixin heading80 {
+  font-size: 80px;
+  line-height: 80px;
+  font-weight: 700;
 }
