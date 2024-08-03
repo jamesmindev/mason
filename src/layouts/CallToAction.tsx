@@ -8,7 +8,7 @@ const CallToAction = () => {
         <h2>
           Start the journey to your new home with minimal upfront deposit
         </h2>
-        <Button href="/register" size="lg">
+        <Button href="/apply" size="lg">
         Start Your Application
         </Button>
       </div>
