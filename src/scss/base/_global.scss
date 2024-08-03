@@ -2,7 +2,7 @@
 
 * {
   box-sizing: border-box;
-  @include body20;
+  @include body18;
 
   font-variant-ligatures: none;
   -webkit-font-variant-ligatures: none;
@@ -14,16 +14,15 @@
 }
 
 ::selection {
-  background: $blue;
+  background: $green-dark;
   color: white;
 }
 
 html,
 body {
-  background-color: white;
-  color: black;
   font-family: $font-reg;
   width: 100%;
+  background-color: $beige-light;
 }
 
 // body {
@@ -41,11 +40,13 @@ body {
 //   }
 // }
 
+
+
 .wrapper {
   width: 100%;
   max-width: 1500px;
   margin: 0 auto;
-  padding: 160px 96px;
+  padding: 160px 64px;
 
   @media screen and (max-width: 720px) {
     padding: 96px 24px;

@@ -2,8 +2,10 @@
 @import "../scss/base/variables";
 
 .CallToAction {
-  background-color: $blue;
-  min-height: 650px;
+  background-color: $green-base;
+  min-height: 700px;
+  display: flex;
+  align-items: center;
 
   :global {
     .wrapper {
@@ -13,9 +15,12 @@
     }
 
     h2 {
-      @include heading64;
+      @include heading48;
+      font-weight: 500 !important;
+      margin: 0 auto;
       color: $white;
       text-align: center;
+      width: 80%;
       padding-bottom: 32px;
     }
   }
