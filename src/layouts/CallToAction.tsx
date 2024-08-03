@@ -6,10 +6,10 @@ const CallToAction = () => {
     <section className={styles.CallToAction}>
       <div className="wrapper">
         <h2>
-          Start the journey to your new home with minimal upfront deposit
+          Start Selling with State
         </h2>
-        <Button href="/apply" size="lg">
-        Start Your Application
+        <Button href="/apply" size="rg">
+        Get Started
         </Button>
       </div>
     </section>

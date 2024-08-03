@@ -7,106 +7,47 @@
   :global {
     .wrapper {
       h2 {
-        text-align: center;
-        @include heading56;
-        padding-bottom: 80px;
-        color: $green-dark;
-        // padding-left: 4px;
+        @include body48;
+        padding-bottom: 64px;
       }
     }
 
     .testimonials {
       display: grid;
-      grid-template-columns: 0.5fr 1fr;
-      gap: 16px;
+      grid-template-columns: 1fr 1fr 1fr;
+      gap: 32px;
+      margin: 0 8px;
 
-      .bento-left {
-        display: grid;
-        gap: 16px;
-      }
-
-      .bento-right {
-        display: grid;
-
-        .bento-top {
-          margin-bottom: 16px;
-          display: grid;
-          grid-template-columns: 1fr 1.5fr;
-          gap: 16px;
-        }
-
-        .bento-btm {
-          display: grid;
-          grid-template-columns: 2fr 1.2fr;
-          gap: 16px;
-        }
-      }
-
-      .testimonial-highlight {
-        background-color: $lightpink;
-        padding: 32px;
-        border-radius: 24px;
-        min-height: 480px;
+      .card {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
+        padding: 24px;
+        border-radius: 24px;
 
-        .copy {
+        &:nth-child(2) {
+          margin-bottom: 64px;
+        }
 
-          .icon {
-            @include flex-center;
-            width: 64px;
-            height: 64px;
+        .content {
+          img {
+            width: 100%;
+            height: 280px;
             border-radius: 16px;
-            background-color: $orange2;
             margin-bottom: 16px;
           }
 
           p {
-            font-size: 28px;
-            line-height: 38px;
-            margin-bottom: auto;
-            // padding-bottom: 64px;
+            @include body22;
           }
         }
-      }
 
-      .testimonial-basic {
-        background-color: $beige-light;
-        padding: 32px;
-        border-radius: 24px;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        min-height: 300px;
+        .customer-info {
+          @include body18;
 
-        p {
-          &:first-child {
-            // padding-bottom: 80px;
+          p:last-child {
+            color: #999;
           }
-        }
-      }
-
-      .icons {
-        background-color: $green-dark;
-        @include flex-center;
-        min-height: 260px;
-        border-radius: 24px;
-        gap: 16px;
-
-        img { 
-          width: 96px;
-        }
-      }
-
-      .logo-container {
-        background-color: $green-dark;
-        border-radius: 24px;
-        @include flex-center;
-
-        .logo {
-          fill: $beige-light;
-          height: 40px !important;
         }
       }
     }
@@ -114,11 +55,7 @@
 
   @media screen and (max-width: 1200px) {
     :global {
-      .wrapper {
-        & > h2 + p {
-          margin-bottom: 64px;
-        }
-        
+      .wrapper {  
       }
     }
   }
@@ -126,10 +63,6 @@
   @media screen and (max-width: 900px) {
     :global {
       .wrapper {
-        & > h2 {
-          @include body16;
-          margin-bottom: 16px;
-        }
       }
     }
   }
