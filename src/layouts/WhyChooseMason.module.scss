@@ -65,9 +65,6 @@
   @media screen and (max-width: 1200px) {
     :global {
       .wrapper {
-        & > h2 + p {
-          margin-bottom: 64px;
-        }
         .areas {
           grid-template-columns: 1fr 1fr;
         }
@@ -79,38 +76,34 @@
     :global {
       .wrapper {
         & > h2 {
-          @include body16;
-          margin-bottom: 16px;
-        }
-
-        & > h2 + p {
-          @include heading32;
-          width: 100%;
-          max-width: 100%;
+          @include heading40;
+          padding-bottom: 40px;
         }
 
         .areas {
           grid-template-columns: 1fr;
+          gap: 12px;
 
           .card {
             padding: 24px;
 
             .card-icon {
-              width: 48px;
-              height: 48px;
-              padding: 8px;
+              width: 56px;
+              height: 56px;
               margin-bottom: 16px;
+              border-radius: 12px;
+
+              img {
+                width: 40px;
+              }
             }
 
             .card-heading {
-              margin-bottom: 12px;
+              @include heading20;
+              margin-bottom: 0px;
             }
 
             .card-body {
-              @include body16;
-            }
-
-            .card-link {
               @include body16;
             }
           }

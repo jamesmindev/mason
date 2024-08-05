@@ -40,22 +40,26 @@
   @media screen and (max-width: 900px) {
     :global {
       .wrapper {
-        padding-bottom: 40px;
+        grid-template-columns: 1fr;
+        padding-bottom: 24px;
 
-        .main-nav {
-          flex-direction: column;
-          align-items: start;
+        .logo {
+          height: 32px !important;
+          margin-bottom: 64px;
+        }
+
+        nav {
+          // display: grid;
+          grid-template-columns: 1fr;
           margin-bottom: 96px;
 
-          & > svg {
-            margin-bottom: 80px;
-            height: 24px !important;
+          ul {
+            padding-bottom: 24px;
           }
-
-          nav {
-            flex-direction: column;
-            gap: 0px;
-          }
+        }
+    
+        .notice {
+          
         }
       }
     }

@@ -135,4 +135,58 @@
       }
     }
   }
+
+  @media screen and (max-width: 1200px) {
+    @include body16;
+
+    .flex-h {
+      flex-direction: column;
+      gap: 0px;
+    }
+
+    .wrapper {
+      .form-container {
+        padding: 24px;
+
+        .branding {
+          flex-direction: column;
+          justify-content: unset;
+          align-items: start;
+          gap: 12px;
+          padding-top: 12px;
+          padding-bottom: 16px;
+
+          .logo {
+            display: none;
+          }
+        }
+  
+        h2 {
+          @include heading32;
+          padding-bottom: 24px;
+        }
+  
+        form {
+          margin-top: 16px;
+  
+          label {
+            p { 
+              @include body14;
+            }
+            
+            input {
+              padding: 16px 16px;
+              margin-bottom: 20px;
+            }
+          }
+        }
+  
+        .confirm-email {
+          .icon {
+            margin-bottom: 24px;
+          }
+        }
+      }
+    }
+  }
 }

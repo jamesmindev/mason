@@ -1,13 +1,9 @@
 @import "@/scss/base/variables";
 
-
 .SiteHeader {
-  // background: rgba(255, 255, 255, 0.5);
-  // backdrop-filter: blur(12px);
   position: fixed;
   z-index: 99999999;
   width: 100%;
-  // height: 80px;
   background-color: $green-base;
 
   :global {
@@ -19,16 +15,9 @@
       justify-content: space-between;
       align-items: center;
 
-      &.white-bg {
-        background-color: white !important;
-      }
-
-      &.scroll {
-        background-color: white;
-      }
-
       #mobile-menu {
         display: none;
+        color: $beige-light;
       }
 
       .links-container {
@@ -53,73 +42,66 @@
         }
       }
     }
+
+    .mobile-nav-container {
+      display: none;
+      opacity: 0;
+    }
   }
 
   // Mobile menu
-  @media screen and (max-width: 720px) {
-    // background-color: green;
-    // height: 60px;
+  @media screen and (max-width: 800px) {
+    background-color: unset;
 
     :global {
       .wrapper {
         $mobile-padding-x: 24px;
         padding: 16px 24px;
+        background-color: $green-base;
+        flex-direction: column;
+        transition: all 300ms ease-in-out;
+        
+        &.mobile-bg {
+          border-bottom-left-radius: 16px;
+          border-bottom-right-radius: 16px;
+        }
+
+        .logo-menu-container {
+          width: 100%;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+        }
 
         #mobile-menu {
           padding: 8px;
           display: block;
           cursor: pointer;
-
-          &.red {
-            color: red;
-          }
         }
 
-        .links-container {
-          // background: rgba(255, 255, 255, 0.5);
-          // backdrop-filter: blur(12px);
-          background-color: white;
-
-          padding: 16px $mobile-padding-x 24px;
-          position: absolute;
+        .links-container {    
+          height: 0px;
+          overflow: hidden;
+          transition: all 300ms ease-in-out;
           width: 100%;
-          height: 100vh;
-          top: 64px;
-          left: 0px;
-
-          display: none;
-
-          &.mobile-hidden {
-            display: none;
-          }
 
           &.visible {
-            display: block;
+            transition: all 300ms ease-in-out;
+            height: 250px;
           }
 
           nav {
-            margin-bottom: 16px;
-
+            display: block;
             ul {
               flex-direction: column;
-              align-items: start;
-              gap: 8px;
-
               li {
                 width: 100%;
                 a {
                   display: block;
-                  padding-left: 4px;
-                  // width: 100%;
-                  // background-color: grey;
+                  padding-left: 2px;
                 }
               }
             }
-          }
-
-          a[href="register"] {
-            // width: 100%;
-            padding: 16px 24px;
           }
         }
       }

@@ -68,21 +68,24 @@ const SiteHeader = () => {
     >
       <div
         ref={siteHeaderWrapperRef}
-        className={`wrapper ${isMobileMenuOpen ? "white-bg" : ""}`}
+        className={`wrapper ${isMobileMenuOpen ? "mobile-bg" : ""}`}
       >
-        <Link className="link-logo" href="/" onClick={hideMobileMenu}>
-          <Logo fillColor="#E9E8E2"/>
-        </Link>
+        <div className="logo-menu-container">
+          <Link className="link-logo" href="/" onClick={hideMobileMenu}>
+            <Logo fillColor="#E9E8E2"/>
+          </Link>
 
-        <div
-          id="mobile-menu"
-          onClick={(e) => {
-            setIsMobileMenuOpen((prev) => !prev);
-          }}
-        >
-          menu
+          <div
+            id="mobile-menu"
+            onClick={(e) => {
+              setIsMobileMenuOpen((prev) => !prev);
+            }}
+          >
+            {!isMobileMenuOpen && "menu"}
+            {isMobileMenuOpen && "close"}
+          </div>
         </div>
-
+        
         <div
           className={`links-container ${isMobileMenuOpen ? "visible" : ""}`}
           ref={mobileMenuLinksRef}
@@ -115,10 +118,6 @@ const SiteHeader = () => {
               </li>
             </ul>
           </nav>
-
-          {/* <Button href="/register" size="sm">
-            Register Interest
-          </Button> */}
         </div>
       </div>
     </header>

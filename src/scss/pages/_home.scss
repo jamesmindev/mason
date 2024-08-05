@@ -4,7 +4,6 @@
     position: relative;
     height: 90vh;
     min-height: 850px;
-    // background-color: #202629;
 
     .wrapper {
       display: grid;
@@ -45,12 +44,41 @@
       }
     }
 
-    // @media screen and (max-width: 900px) {
-    //   h1 {
-    //     @include heading40;
-    //     width: 100%;
-    //   }
-    // }
+    @media screen and (max-width: 1200px) {
+      height: unset;
+
+      .wrapper {
+        grid-template-columns: 1fr;
+  
+        .hero-content {
+          padding-right: 0;
+          padding-bottom: 24px;
+
+          h1 {
+            @include heading40;
+            padding-bottom: 16px;
+          }
+    
+          p {
+            padding-bottom: 24px;
+          }
+        }
+        
+        .image-container {
+          grid-template-columns: 1fr;
+          gap: 16px;
+  
+  
+          img {
+            aspect-ratio: 7/8;
+  
+            &:last-child {
+              display: none;
+            }
+          }
+        }
+      }
+    }
   }
 
   .how-it-works {
@@ -154,103 +182,67 @@
         }
       }
     }
-  }
 
-  
+    @media screen and (max-width: 1200px) {
+      .wrapper {
+        grid-template-columns: 1fr;
 
-  .investment-strategies {
-    .wrapper {
-      h2 {
-        margin-bottom: 24px;
-        padding-left: 4px;
-      }
 
-      h2 + p {
-        @include heading40;
-        margin-bottom: 96px;
-        max-width: 1000px;
-      }
-    }
+        .sticky-container {
+          position: relative;
+        }
 
-    .strategies {
-      display: grid;
-      grid-template-columns: 1fr 1fr 1fr;
-      column-gap: 24px;
-
-      .card {
-        background-color: #202629;
-        border-radius: 24px;
-        overflow: hidden;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-        // position: relative;
-
-        &-info {
-          color: white;
-          padding: 48px 32px;
-          min-height: 360px;
-
-          h3 {
-            font-size: 32px;
-            margin-bottom: 80px;
-            line-height: 36px;
-
-            span {
-              font-weight: 200;
-              display: block;
-              font-style: italic;
-              margin-bottom: 4px;
-            }
+        .section-intro {
+          position: unset;
+          padding-right: 0px;
+          padding-bottom: 40px;
+          
+          h2 {
+            @include heading40;
           }
 
           p {
-            font-size: 18px;
-            line-height: 26px;
+            padding-bottom: 24px;
           }
         }
 
-        &-image {
-          height: 360px;
-          width: 100%;
-          object-fit: cover;
-          // position: absolute;
-          // bottom: 0px;
-        }
-      }
-    }
+        .steps {
+          gap: 12px;
 
-    @media screen and (max-width: 900px) {
-      .wrapper {
-        overflow: hidden;
+          .step {
+            padding: 16px;
+            gap: 12px;
 
-        h2 {
-          @include body16;
-          margin-bottom: 16px;
-        }
-
-        h2 + p {
-          @include heading32;
-        }
-
-        .strategies {
-          width: 100%;
-          display: flex;
-          overflow-x: scroll;
-
-          &::-webkit-scrollbar {
-            display: none;
+            .number {
+              width: 40px;
+              height: 40px;
+              border-radius: 12px;
+              font-size: 20px;
+            }
+            .description {
+              p {
+                &:first-child {
+                  font-size: 20px;
+                  line-height: 30px;
+                }
+              }
+            }
           }
+          .more-info {
+            flex-direction: column;
+            padding: 24px;
+            align-items: start;
 
-          .card {
-            width: 90%;
-            flex-shrink: 0;
-
-            .card-info {
-              padding: 32px 24px;
+            .description {
+              padding-right: 0px;
 
               p {
-                @include body16;
+                padding-bottom: 12px;
+
+                &:first-child {
+                  font-size: 20px;
+                  line-height: 30px;
+                }
               }
             }
           }
